@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+        background-image: url('./assets/fondo.png'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la ruta de tu imagen */
+        background-size: cover; /* Ajusta el tamaÃ±o de la imagen para cubrir todo el fondo */
+        background-repeat: repeat; /* Evita que la imagen se repita */
+        background-attachment: fixed; /* Mantiene la imagen fija mientras se desplaza el contenido */
+
+}
+
+.glass-style {
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo con transparencia */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.glass-style:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Color de fondo con transparencia en hover */
+    transform: scale(1.05);
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    height: 10vh;
+    width: 90vh;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+div.title {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+div.title h1 {
+    padding: 10px;
+    margin: 0;
+}
+
+/* Main content */
+main.dashboard {
+    min-height: 80vh; /* Asegura que el contenido principal ocupe al menos 80% del alto de la pantalla */
+    display: flex;
+    flex-direction: column; /* Alinear elementos internos verticalmente */
+    justify-content: center; /* Centra todo el contenido verticalmente */
+    align-items: center; /* Centra todo el contenido horizontalmente */
+}
+
+/* Left Sidebar */
+div.left-panel {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+div.recent-searches h2 {
+    font-size: 1.2rem;
+    color: white;
+    height: 100%;
+    margin: 5px;
+}
+
+div.cityList {
+    margin: 15px;
+}
+
+div.city {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+div.cityName {
+    color: rgb(255, 255, 255);
+}
+
+/* Weather Data */
+div.currentWeather,
+div.left-sidebar {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+div.currentWeather p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: white;
+}
+
+div.currentWeather h2,
+div.currentWeather h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: white;
+}
+
+
+
+div.fiveDay h2 {
+    font-size: 1.2rem;
+}
+
+div.fiveDay p {
+    font-size: 0.9rem;
+}
+
+div.fiveDay p.card-title {
+    font-weight: bold;
+    
+}
+
+/* Estilos para las cards de 5 dÃ­as */
+.fiveDay .card {
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 0.5rem;
+    padding: 15px;
+    margin: 10px;
+    color: white;
+    background-color: transparent; /* Fondo transparente */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    max-width: 100px; /* Anchura mÃ¡xima deseada */
+}
+
+
+.fiveDay .card:hover {
+    transform: scale(1.05); /* Escala en hover */
+}
+
+/* Estilos para los textos de temperatura y humedad en las tarjetas de 5 dÃ­as */
+.fiveDay-temp,
+.fiveDay-humid {
+    color: white; /* Cambio del color de texto */
+}
+
+
+
+/* Media Query para ajustar en pantallas pequeÃ±as */
+@media (max-width: 768px) {
+    header {
+        width: 90%;
+    }
+
+    main.dashboard {
+        padding: 20px;
+        min-height: 90vh;
+    }
+
+    div.cityList {
+        margin-top: 5px;
+        min-height: 90vh;
+    }
+}
