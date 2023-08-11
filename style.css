@@ -159,4 +159,11 @@ div.fiveDay p.card-title {
         margin-top: 5px;
         min-height: 90vh;
     }
+    
+    div.currentWeather {
+        margin: auto;
+        justify-content: center;
+
+    }
+}
 }
